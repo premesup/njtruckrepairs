@@ -81,19 +81,21 @@
     color:var(--steel); font-size:11px; font-weight:500; letter-spacing:0.1em;
     font-family:'IBM Plex Mono', monospace; text-transform:uppercase; margin-top:3px;
   }
-  .nav-links{ display:flex; gap:32px; align-items:center; }
+  .nav-links{ display:flex; gap:24px; align-items:center; }
   .nav-links a{
     color:var(--ink); font-size:13px; letter-spacing:0.04em;
     font-family:'IBM Plex Sans', sans-serif; opacity:0.72;
-    transition:opacity 0.15s;
+    transition:opacity 0.15s; white-space:nowrap;
   }
   .nav-links a:hover{ opacity:1; }
   .nav-cta{
     border:1px solid var(--ink); padding:9px 18px; opacity:1 !important;
   }
   .nav-cta:hover{ background:var(--ink); color:var(--paper) !important; }
+  .brand-link{ display:block; }
+  .brand-link:hover .l1{ color:var(--red); }
 
-  @media(max-width:760px){ .nav-links a:not(.nav-cta){display:none;} .nav-links .has-dropdown{display:none;} }
+  @media(max-width:960px){ .nav-links a:not(.nav-cta){display:none;} .nav-links .has-dropdown{display:none;} }
 
   /* ---------- Services dropdown ---------- */
   .has-dropdown{ position:relative; }
@@ -391,10 +393,12 @@
 
 <nav>
   <div class="wrap">
-    <div class="brand-text">
-      <div class="l1">Commercial Truck Restoration &amp; Repair</div>
-      <div class="l2">Complete Truck &amp; Trailer Repair Solutions</div>
-    </div>
+    <a class="brand-link" href="index.html">
+      <div class="brand-text">
+        <div class="l1">Commercial Truck Restoration &amp; Repair</div>
+        <div class="l2">Complete Truck &amp; Trailer Repair Solutions</div>
+      </div>
+    </a>
     <div class="nav-links">
       <div class="has-dropdown">
         <a href="index.html#services">Services <span class="dd-caret">&#9662;</span></a>
@@ -479,7 +483,7 @@
 <footer>
   <div class="wrap foot-grid">
     <p>© 2026 Commercial Truck Restoration &amp; Repair — 379 County Rd, Cliffwood, NJ 07721</p>
-    <p>(732) 970-7334</p>
+    <p><a href="https://www.facebook.com/njtruckrepairs/" target="_blank" rel="noopener noreferrer" style="opacity:0.8;">Facebook</a> &nbsp;·&nbsp; (732) 970-7334</p>
   </div>
 </footer>
 
