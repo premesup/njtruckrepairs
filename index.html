@@ -350,7 +350,7 @@
     <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#lease-return">Lease Returns</a>
-      <a href="#contact">Get an Estimate</a>
+      <a href="#estimate">Get an Estimate</a>
       <a href="resources.html">Resources</a>
       <a class="nav-cta" href="tel:7329707334">(732) 970-7334</a>
     </div>
@@ -504,6 +504,85 @@
   </div>
 </section>
 
+<section class="section" id="estimate">
+  <div class="wrap">
+    <div class="sec-head estimate-intro">
+      <div class="sec-eyebrow">Request A Quote</div>
+      <h2>Get an estimate, no call required.</h2>
+      <p>Send a description and a few photos — we'll get back to you within 1 business day with next steps.</p>
+    </div>
+
+    <form id="estimate-form" name="estimate-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" class="estimate-form">
+      <input type="hidden" name="form-name" value="estimate-request">
+      <p class="hp-field"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+
+      <div class="form-row">
+        <div class="form-num">01</div>
+        <div class="form-field">
+          <label class="form-label" for="f-name">Full Name</label>
+          <input class="form-input" type="text" id="f-name" name="name" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-num">02</div>
+        <div class="form-field">
+          <label class="form-label" for="f-phone">Phone</label>
+          <input class="form-input" type="tel" id="f-phone" name="phone" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-num">03</div>
+        <div class="form-field">
+          <label class="form-label" for="f-email">Email (optional)</label>
+          <input class="form-input" type="email" id="f-email" name="email">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-num">04</div>
+        <div class="form-field">
+          <label class="form-label" for="f-reason">What's this regarding?</label>
+          <select class="form-select" id="f-reason" name="reason" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="Insurance Claim">Insurance Claim</option>
+            <option value="Lease Turn-In">Lease Turn-In</option>
+            <option value="Fleet Maintenance">Fleet Maintenance</option>
+            <option value="General Repair">General Repair</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-num">05</div>
+        <div class="form-field wide">
+          <label class="form-label" for="f-desc">Tell us what's going on</label>
+          <textarea class="form-textarea" id="f-desc" name="description" required placeholder="Make/model, what happened, symptoms, anything we should know before the truck comes in."></textarea>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-num">06</div>
+        <div class="form-field wide">
+          <label class="form-label" for="f-photos">Photos (optional, but it helps)</label>
+          <div class="form-file-wrap">
+            <input type="file" id="f-photos" name="photos" accept="image/*" multiple>
+          </div>
+          <div class="form-hint">You can select multiple photos at once.</div>
+        </div>
+      </div>
+
+      <div class="form-submit-row">
+        <button class="btn btn-primary" type="submit">Send Request</button>
+      </div>
+
+      <div id="estimate-success" class="form-msg success" style="display:none;">Thanks — we got it. We'll follow up within 1 business day.</div>
+      <div id="estimate-error" class="form-msg error" style="display:none;">Something went wrong sending that. Please call us at (732) 970-7334 instead.</div>
+    </form>
+  </div>
+</section>
+
 <section class="section contact" id="contact">
   <div class="wrap contact-grid">
     <div>
@@ -539,5 +618,30 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var form = document.getElementById('estimate-form');
+  if (!form) return;
+  var successMsg = document.getElementById('estimate-success');
+  var errorMsg = document.getElementById('estimate-error');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errorMsg.style.display = 'none';
+    var data = new FormData(form);
+    fetch('/', { method: 'POST', body: data })
+      .then(function(res){
+        if (res.ok) {
+          form.style.display = 'none';
+          successMsg.style.display = 'block';
+        } else {
+          throw new Error('Bad response');
+        }
+      })
+      .catch(function(){
+        errorMsg.style.display = 'block';
+      });
+  });
+})();
+</script>
 </body>
 </html>
