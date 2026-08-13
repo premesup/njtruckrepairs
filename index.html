@@ -221,6 +221,11 @@
 
   /* ---------- Contact ---------- */
   .contact{ border-bottom:none; }
+  .contact-photo-wide{
+    width:100%; aspect-ratio:3/1; object-fit:cover;
+    opacity:0.4; margin-bottom:56px;
+  }
+  @media(max-width:640px){ .contact-photo-wide{ aspect-ratio:16/10; } }
   .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:64px; }
   @media(max-width:860px){ .contact-grid{grid-template-columns:1fr; gap:40px;} }
   .info-row{ display:flex; justify-content:space-between; padding:20px 0; border-bottom:1px solid var(--line); gap:16px; }
@@ -641,9 +646,11 @@
 </section>
 
 <section class="section contact" id="contact">
+  <div class="wrap">
+    <img class="contact-photo-wide" src="images/building.jpg" width="960" height="540" loading="lazy" alt="Commercial Truck Restoration and Repair building at 379 County Rd">
+  </div>
   <div class="wrap contact-grid">
     <div>
-      <img class="contact-photo" src="images/building.jpg" width="960" height="540" loading="lazy" alt="Commercial Truck Restoration and Repair building at 379 County Rd">
       <h2 style="font-size:clamp(24px,3vw,32px); font-weight:600; margin-bottom:28px;">Visit the shop.</h2>
       <div class="info-row"><div class="info-label">Phone</div><div class="info-value"><a href="tel:7329707334">(732) 970-7334</a></div></div>
       <div class="info-row"><div class="info-label">Email</div><div class="info-value"><a href="mailto:info@njtruckrepairs.com">info@njtruckrepairs.com</a></div></div>
