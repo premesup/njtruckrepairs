@@ -222,10 +222,10 @@
   /* ---------- Contact ---------- */
   .contact{ border-bottom:none; }
   .contact-photo-wide{
-    width:100%; aspect-ratio:3/1; object-fit:cover;
-    opacity:0.4; margin-bottom:56px;
+    width:100%; height:56vh; object-fit:cover; display:block;
+    margin-bottom:56px;
   }
-  @media(max-width:640px){ .contact-photo-wide{ aspect-ratio:16/10; } }
+  @media(max-width:640px){ .contact-photo-wide{ height:38vh; } }
   .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:64px; }
   @media(max-width:860px){ .contact-grid{grid-template-columns:1fr; gap:40px;} }
   .info-row{ display:flex; justify-content:space-between; padding:20px 0; border-bottom:1px solid var(--line); gap:16px; }
@@ -646,9 +646,7 @@
 </section>
 
 <section class="section contact" id="contact">
-  <div class="wrap">
-    <img class="contact-photo-wide" src="images/building.jpg" width="960" height="540" loading="lazy" alt="Commercial Truck Restoration and Repair building at 379 County Rd">
-  </div>
+  <img class="contact-photo-wide" src="images/building.jpg" width="2400" height="1000" loading="lazy" alt="Commercial Truck Restoration and Repair building at 379 County Rd">
   <div class="wrap contact-grid">
     <div>
       <h2 style="font-size:clamp(24px,3vw,32px); font-weight:600; margin-bottom:28px;">Visit the shop.</h2>
