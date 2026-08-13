@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://njtruckrepairs.com/sitemap.xml
