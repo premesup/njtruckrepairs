@@ -75,13 +75,14 @@
   }
   .brand-text .l1{
     font-size:16px; font-weight:600; letter-spacing:0.01em;
-    font-family:'Oswald', sans-serif; text-transform:uppercase;
+    font-family:'Oswald', sans-serif; text-transform:uppercase; white-space:nowrap;
   }
   .brand-text .l2{
     color:var(--steel); font-size:11px; font-weight:500; letter-spacing:0.1em;
     font-family:'IBM Plex Mono', monospace; text-transform:uppercase; margin-top:3px;
   }
-  .nav-links{ display:flex; gap:24px; align-items:center; }
+  nav .wrap{ max-width:1300px; }
+  .nav-links{ display:flex; gap:22px; align-items:center; }
   .nav-links a{
     color:var(--ink); font-size:13px; letter-spacing:0.04em;
     font-family:'IBM Plex Sans', sans-serif; opacity:0.72;
@@ -95,7 +96,7 @@
   .brand-link{ display:block; }
   .brand-link:hover .l1{ color:var(--red); }
 
-  @media(max-width:960px){ .nav-links a:not(.nav-cta){display:none;} .nav-links .has-dropdown{display:none;} }
+  @media(max-width:1180px){ .nav-links a:not(.nav-cta){display:none;} .nav-links .has-dropdown{display:none;} }
 
   /* ---------- Services dropdown ---------- */
   .has-dropdown{ position:relative; }
