@@ -98,26 +98,32 @@
 
   @media(max-width:1180px){ .nav-links a:not(.nav-cta){display:none;} .nav-links .has-dropdown{display:none;} }
 
-  /* ---------- Services dropdown ---------- */
+  /* ---------- Services mega-menu ---------- */
   .has-dropdown{ position:relative; }
   .dd-caret{ font-size:9px; margin-left:4px; opacity:0.6; }
   .nav-dropdown{
     position:absolute; top:100%; left:0; margin-top:0;
     background:var(--paper); border:1px solid var(--line);
-    min-width:300px; padding:8px 0;
+    min-width:620px; padding:24px 28px;
     box-shadow:0 14px 28px rgba(0,0,0,0.18);
     opacity:0; visibility:hidden; transform:translateY(-6px);
     transition:opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
     z-index:60;
+    display:grid; grid-template-columns:repeat(4,1fr); gap:0 26px;
   }
   .has-dropdown:hover .nav-dropdown, .has-dropdown:focus-within .nav-dropdown{
     opacity:1; visibility:visible; transform:translateY(0);
   }
-  .nav-dropdown a{
-    display:block; padding:11px 20px; font-size:13px; color:var(--ink); opacity:0.82;
-    font-family:'IBM Plex Sans'; letter-spacing:0;
+  .dd-group-title{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.1em;
+    text-transform:uppercase; color:var(--red); margin-bottom:8px;
   }
-  .nav-dropdown a:hover{ opacity:1; color:var(--red); background:rgba(27,33,38,0.04); }
+  .nav-dropdown a{
+    display:block; padding:9px 0; font-size:13px; color:var(--ink); opacity:0.82;
+    font-family:'IBM Plex Sans'; letter-spacing:0; border-bottom:1px solid var(--line);
+  }
+  .nav-dropdown .dd-group a:last-child{ border-bottom:none; }
+  .nav-dropdown a:hover{ opacity:1; color:var(--red); }
 
   /* ---------- Breadcrumb & service pages ---------- */
   .breadcrumb{ font-family:'IBM Plex Mono'; font-size:11.5px; color:var(--steel); letter-spacing:0.04em; }
@@ -347,19 +353,9 @@
   "@type": "Service",
   "serviceType": "Welding & Fabrication",
   "name": "Welding & Fabrication | Commercial Truck Restoration & Repair",
-  "description": "From structural repairs to custom fabrication, our welders work in steel, aluminum, and stainless — frame repair, bracket and mount fabrication, and one-off custom jobs.",
+  "description": "From structural repairs to custom fabrication, our welders work in steel, aluminum, and stainless \u2014 frame repair, bracket and mount fabrication, and one-off custom jobs.",
   "provider": {
-    "@type": "AutoRepair",
-    "name": "Commercial Truck Restoration & Repair",
-    "telephone": "+17329707334",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "379 County Rd",
-      "addressLocality": "Cliffwood",
-      "addressRegion": "NJ",
-      "postalCode": "07721",
-      "addressCountry": "US"
-    }
+    "@id": "https://njtruckrepairs.com/#business"
   },
   "areaServed": {
     "@type": "Place",
@@ -404,19 +400,30 @@
       <div class="has-dropdown">
         <a href="index.html#services">Services <span class="dd-caret">&#9662;</span></a>
         <div class="nav-dropdown">
-          <a href="complete-truck-restoration.html">Complete Truck Restoration</a>
-          <a href="collision-repair.html">Body Work &amp; Collision Repair</a>
-          <a href="paint-refinishing.html">Professional Paint &amp; Refinishing</a>
-          <a href="major-mechanical-repair.html">Major Mechanical Repair</a>
-          <a href="minor-mechanical-repair.html">Small Mechanical Repair</a>
-          <a href="trailer-repair.html">Trailer Repair</a>
-          <a href="reefer-repair.html">Reefer Repair</a>
-          <a href="fleet-maintenance.html">Fleet Maintenance &amp; PM Programs</a>
-          <a href="dot-inspections.html">DOT Inspections</a>
-          <a href="diagnostics-electrical.html">Diagnostics &amp; Electrical</a>
-          <a href="welding-fabrication.html">Welding &amp; Fabrication</a>
-        </div>
-      </div>
+          <div class="dd-group">
+            <div class="dd-group-title">Body &amp; Paint</div>
+            <a href="complete-truck-restoration.html">Complete Truck Restoration</a>
+            <a href="collision-repair.html">Body Work &amp; Collision Repair</a>
+            <a href="paint-refinishing.html">Professional Paint &amp; Refinishing</a>
+          </div>
+          <div class="dd-group">
+            <div class="dd-group-title">Mechanical</div>
+            <a href="major-mechanical-repair.html">Major Mechanical Repair</a>
+            <a href="minor-mechanical-repair.html">Small Mechanical Repair</a>
+            <a href="diagnostics-electrical.html">Diagnostics &amp; Electrical</a>
+          </div>
+          <div class="dd-group">
+            <div class="dd-group-title">Trailer &amp; Reefer</div>
+            <a href="trailer-repair.html">Trailer Repair</a>
+            <a href="reefer-repair.html">Reefer Repair</a>
+            <a href="welding-fabrication.html">Welding &amp; Fabrication</a>
+          </div>
+          <div class="dd-group">
+            <div class="dd-group-title">Fleet &amp; Compliance</div>
+            <a href="fleet-maintenance.html">Fleet Maintenance &amp; PM Programs</a>
+            <a href="dot-inspections.html">DOT Inspections</a>
+          </div>
+        </div></div>
       <a href="truck-parking.html">Truck Parking</a>
       <a href="index.html#lease-return">Lease Returns</a>
       <a href="index.html#estimate">Get an Estimate</a>
