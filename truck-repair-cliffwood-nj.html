@@ -137,6 +137,15 @@
   .related-links a{ font-size:14px; padding:11px 0; border-bottom:1px solid var(--line); display:block; }
   .related-links a:hover{ color:var(--red); }
 
+  /* ---------- Service blocks (location page) ---------- */
+  .svc-block{ padding:30px 0; border-bottom:1px solid var(--line); max-width:720px; }
+  .svc-block:first-child{ border-top:1px solid var(--line); }
+  .svc-block h3{ font-size:18px; font-weight:500; letter-spacing:0.01em; margin-bottom:12px; }
+  .svc-block p{ font-size:14.5px; line-height:1.65; color:var(--steel); }
+  .svc-links{ display:flex; gap:24px; flex-wrap:wrap; margin-top:14px; }
+  .svc-links a{ font-family:'IBM Plex Mono'; font-size:12.5px; letter-spacing:0.03em; color:var(--ink); }
+  .svc-links a:hover{ color:var(--red); }
+
   /* ---------- Hero ---------- */
   .hero{ padding:110px 0 90px; border-bottom:1px solid var(--line); }
   .eyebrow{
@@ -481,18 +490,68 @@
       <h2>Everything a truck needs, in one shop.</h2>
       <p>Every service below is performed in-house at the Cliffwood facility — no outsourcing to a second shop for paint, frame, or diesel work.</p>
     </div>
-    <div class="worksheet">
-      <div class="work-row"><div class="work-num">01</div><div class="work-name"><a href="complete-truck-restoration.html">Complete Truck Restoration</a></div><div class="work-desc">From minor repairs to full frame-off rebuilds.</div></div>
-      <div class="work-row"><div class="work-num">02</div><div class="work-name"><a href="collision-repair.html">Body Work &amp; Collision Repair</a></div><div class="work-desc">Frame straightening, fiberglass &amp; panel repair.</div></div>
-      <div class="work-row"><div class="work-num">03</div><div class="work-name"><a href="paint-refinishing.html">Professional Paint &amp; Refinishing</a></div><div class="work-desc">State-of-the-art booth for flawless, factory-match finishes.</div></div>
-      <div class="work-row"><div class="work-num">04</div><div class="work-name"><a href="major-mechanical-repair.html">Major Mechanical Repair</a></div><div class="work-desc">Engines, transmissions, differentials &amp; clutches.</div></div>
-      <div class="work-row"><div class="work-num">05</div><div class="work-name"><a href="minor-mechanical-repair.html">Small Mechanical Repair</a></div><div class="work-desc">Brakes, suspensions, belts, hoses, lights &amp; general maintenance.</div></div>
-      <div class="work-row"><div class="work-num">06</div><div class="work-name"><a href="trailer-repair.html">Trailer Repair</a></div><div class="work-desc">Flooring, doors, lights, wiring, suspension &amp; welding.</div></div>
-      <div class="work-row"><div class="work-num">07</div><div class="work-name"><a href="reefer-repair.html">Reefer Repair</a></div><div class="work-desc">Carrier &amp; Thermo King units — diagnostics, repairs &amp; PM.</div></div>
-      <div class="work-row"><div class="work-num">08</div><div class="work-name"><a href="fleet-maintenance.html">Fleet Maintenance &amp; PM Programs</a></div><div class="work-desc">Scheduled service to keep your fleet compliant &amp; on the road.</div></div>
-      <div class="work-row"><div class="work-num">09</div><div class="work-name"><a href="dot-inspections.html">DOT Inspections</a></div><div class="work-desc">Keep your fleet compliant and on the road.</div></div>
-      <div class="work-row"><div class="work-num">10</div><div class="work-name"><a href="diagnostics-electrical.html">Diagnostics &amp; Electrical</a></div><div class="work-desc">Volvo, Cummins, Detroit, WABCO, Bendix &amp; all major systems.</div></div>
-      <div class="work-row"><div class="work-num">11</div><div class="work-name"><a href="welding-fabrication.html">Welding &amp; Fabrication</a></div><div class="work-desc">Steel, aluminum &amp; stainless repairs and custom work.</div></div>
+
+    <div class="svc-block">
+      <h3>Truck Repair</h3>
+      <p>General mechanical repair for commercial trucks, from diesel engine and transmission work to brakes, suspension, belts, hoses, and lighting. Small issue or major breakdown, it's handled on-site rather than farmed out to a second shop.</p>
+      <div class="svc-links">
+        <a href="major-mechanical-repair.html">Major Mechanical Repair &amp; Diesel &rarr;</a>
+        <a href="minor-mechanical-repair.html">Small Mechanical Repair &amp; Maintenance &rarr;</a>
+      </div>
+    </div>
+
+    <div class="svc-block">
+      <h3>Trailer Repair</h3>
+      <p>Flooring, doors, lights, wiring, suspension, and structural welding for dry vans, flatbeds, and specialty trailers. We work with fleets and owner-operators to keep trailers compliant and road-ready.</p>
+      <div class="svc-links"><a href="trailer-repair.html">Trailer Repair Details &rarr;</a></div>
+    </div>
+
+    <div class="svc-block">
+      <h3>Collision Repair</h3>
+      <p>Frame straightening, fiberglass and panel repair, and cab or sleeper body work for trucks that need more than a passenger-car body shop can offer. We provide insurance-ready estimates and coordinate directly with adjusters.</p>
+      <div class="svc-links"><a href="collision-repair.html">Collision Repair Details &rarr;</a></div>
+    </div>
+
+    <div class="svc-block">
+      <h3>Paint &amp; Refinishing</h3>
+      <p>An in-house paint booth sized for large vehicles means factory-match finishes on repaired panels — no outsourcing to a second facility after collision or body work.</p>
+      <div class="svc-links"><a href="paint-refinishing.html">Paint &amp; Refinishing Details &rarr;</a></div>
+    </div>
+
+    <div class="svc-block">
+      <h3>Truck Restoration</h3>
+      <p>From targeted repairs to full frame-off rebuilds, we bring older or heavily worn trucks back to dependable, road-ready condition — body, frame, mechanical, and paint, all under one roof.</p>
+      <div class="svc-links"><a href="complete-truck-restoration.html">Complete Truck Restoration Details &rarr;</a></div>
+    </div>
+
+    <div class="svc-block">
+      <h3>Fleet Repair &amp; Maintenance</h3>
+      <p>Scheduled PM programs and priority service for multi-truck accounts, with service history tracked per unit so fleet managers have a maintenance record for every truck.</p>
+      <div class="svc-links"><a href="fleet-maintenance.html">Fleet Maintenance Details &rarr;</a></div>
+    </div>
+
+    <div class="svc-block">
+      <h3>Reefer Repair</h3>
+      <p>Diagnostics, repair, and preventive maintenance for Carrier and Thermo King refrigeration units, so temperature-sensitive loads stay protected.</p>
+      <div class="svc-links"><a href="reefer-repair.html">Reefer Repair Details &rarr;</a></div>
+    </div>
+
+    <div class="svc-block">
+      <h3>DOT Inspections</h3>
+      <p>On-site DOT inspections and compliance checks to keep trucks and trailers legal and on schedule, whether it's an annual inspection or a pre-trip readiness check.</p>
+      <div class="svc-links"><a href="dot-inspections.html">DOT Inspections Details &rarr;</a></div>
+    </div>
+
+    <div class="svc-block">
+      <h3>Electrical &amp; Diagnostics</h3>
+      <p>Diagnostics and electrical repair across Volvo, Cummins, Detroit, WABCO, Bendix, and other major systems, from fault-code troubleshooting to full wiring repairs.</p>
+      <div class="svc-links"><a href="diagnostics-electrical.html">Diagnostics &amp; Electrical Details &rarr;</a></div>
+    </div>
+
+    <div class="svc-block">
+      <h3>Welding &amp; Fabrication</h3>
+      <p>Steel, aluminum, and stainless welding and custom fabrication work, from structural repairs to one-off parts that keep a truck or trailer out of the shop long-term.</p>
+      <div class="svc-links"><a href="welding-fabrication.html">Welding &amp; Fabrication Details &rarr;</a></div>
     </div>
   </div>
 </section>
