@@ -1,0 +1,21 @@
+# Force extension-less URLs to redirect (301) to their canonical .html version.
+# Netlify's default "pretty URL" behavior serves page.html at /page with a 200,
+# creating duplicate-content URLs. These rules eliminate that by redirecting
+# the extension-less path before Netlify's default rewrite can serve it.
+# NOTE: Do not add a rule for "/" -> "/index.html" — the homepage should stay at "/".
+
+/about                          /about.html                          301!
+/collision-repair                /collision-repair.html                301!
+/complete-truck-restoration      /complete-truck-restoration.html      301!
+/diagnostics-electrical          /diagnostics-electrical.html          301!
+/dot-inspections                 /dot-inspections.html                 301!
+/fleet-maintenance                /fleet-maintenance.html               301!
+/major-mechanical-repair         /major-mechanical-repair.html         301!
+/minor-mechanical-repair         /minor-mechanical-repair.html         301!
+/paint-refinishing                /paint-refinishing.html               301!
+/reefer-repair                    /reefer-repair.html                   301!
+/resources                        /resources.html                       301!
+/trailer-repair                   /trailer-repair.html                  301!
+/truck-parking                    /truck-parking.html                   301!
+/truck-repair-cliffwood-nj        /truck-repair-cliffwood-nj.html        301!
+/welding-fabrication               /welding-fabrication.html             301!
