@@ -346,6 +346,50 @@
   .faq-item:first-child{ border-top:1px solid var(--line); }
   .faq-q{ font-family:'IBM Plex Sans'; font-weight:600; font-size:15.5px; margin-bottom:8px; }
   .faq-a{ font-size:14.5px; line-height:1.6; color:var(--steel); max-width:640px; }
+
+  /* ---------- Reefer page photo hero ---------- */
+  .reefer-hero{
+    position:relative;
+    border-bottom:1px solid var(--line);
+    background-color:#d7dfe4;
+    background-image:linear-gradient(90deg,
+      rgba(225,231,235,0.98) 0%,
+      rgba(225,231,235,0.95) 35%,
+      rgba(225,231,235,0.81) 58%,
+      rgba(225,231,235,0.46) 100%),
+      url('reefer-trailer-repair-cliffwood-nj.jpg');
+    background-size:cover;
+    background-position:center 47%;
+  }
+  .reefer-hero-content{padding-top:66px;padding-bottom:80px;}
+  .reefer-hero .breadcrumb{margin-bottom:28px;}
+  .reefer-hero .sec-head{max-width:650px;margin-bottom:0;}
+  .reefer-hero h1{
+    font-size:clamp(35px,4.5vw,54px);
+    line-height:1.08;
+    font-weight:600;
+    max-width:640px;
+  }
+  .reefer-hero .sec-head p{max-width:565px;color:#35424b;font-size:16.5px;}
+  .reefer-hero .hero-ctas{margin-top:32px;}
+  .reefer-services{padding-top:64px;padding-bottom:72px;}
+  .reefer-services .service-list{max-width:850px;}
+  .reefer-trailer-copy{max-width:780px;margin-top:32px;line-height:1.75;}
+  .reefer-trailer-copy a{color:var(--red);text-decoration:underline;text-underline-offset:3px;}
+  @media(max-width:700px){
+    .reefer-hero{
+      background-image:linear-gradient(90deg,
+        rgba(225,231,235,0.96) 0%,
+        rgba(225,231,235,0.90) 60%,
+        rgba(225,231,235,0.77) 100%),
+        url('reefer-trailer-repair-cliffwood-nj.jpg');
+      background-position:62% center;
+    }
+    .reefer-hero-content{padding-top:42px;padding-bottom:56px;}
+    .reefer-hero .breadcrumb{margin-bottom:25px;}
+    .reefer-hero .sec-head p{font-size:15.5px;}
+    .reefer-services{padding-top:48px;padding-bottom:55px;}
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -435,15 +479,25 @@
   </div>
 </nav>
 
-<section class="section" style="padding-top:64px; border-bottom:none;">
-  <div class="wrap">
+<!-- Reefer service hero: actual yard photograph, faded for readable text -->
+<section class="reefer-hero" aria-labelledby="reefer-page-title">
+  <div class="wrap reefer-hero-content">
     <div class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#services">Services</a> / Reefer Repair</div>
-    <div class="sec-head" style="margin-top:22px;">
+    <div class="sec-head">
       <div class="sec-eyebrow">Service</div>
-      <h1 style="font-family:'Oswald'; text-transform:uppercase; font-weight:600; font-size:clamp(28px,4vw,44px); line-height:1.06;">Reefer Repair in Cliffwood, NJ</h1>
+      <h1 id="reefer-page-title">Reefer Repair in Cliffwood, NJ</h1>
       <p>Refrigerated trailers depend on a working unit. We service all brands of reefer units, including Thermo King and Carrier, providing diagnostics, repairs, and scheduled preventive maintenance to help keep loads at temperature.</p>
     </div>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="index.html#estimate">Get an Estimate</a>
+      <a class="btn btn-outline" href="tel:7329707334">Call (732) 970-7334</a>
+    </div>
+  </div>
+</section>
 
+<section class="section reefer-services" aria-label="Reefer repair services">
+  <div class="wrap">
+    <div class="sec-eyebrow">What We Repair</div>
     <ul class="service-list">
       <li>Reefer diagnostics for all brands, including Thermo King and Carrier</li>
       <li>Refrigeration unit repair</li>
@@ -452,13 +506,7 @@
       <li>Emergency and after-hours repair</li>
       <li>Scheduled PM programs for reefer fleets</li>
     </ul>
-
-    <p style="margin-top:28px;">Need refrigerated trailer body repairs too? We work on reefer trailers from Utility, Great Dane, Wabash, Hyundai Translead, Vanguard, Stoughton, Manac, and other manufacturers, including doors, walls, liners, floors, and insulation. See our <a href="trailer-repair.html">trailer repair services</a>.</p>
-
-    <div class="hero-ctas" style="margin-top:40px;">
-      <a class="btn btn-primary" href="index.html#estimate">Get an Estimate</a>
-      <a class="btn btn-outline" href="tel:7329707334">Call (732) 970-7334</a>
-    </div>
+    <p class="reefer-trailer-copy">Need refrigerated trailer body repairs too? We work on reefer trailers from Utility, Great Dane, Wabash, Hyundai Translead, Vanguard, Stoughton, Manac, and other manufacturers, including doors, walls, liners, floors, and insulation. See our <a href="trailer-repair.html">trailer repair services</a>.</p>
   </div>
 </section>
 
